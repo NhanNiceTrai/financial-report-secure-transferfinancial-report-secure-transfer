@@ -1,0 +1,36 @@
+\chapter{Cơ sở lý thuyết}
+
+\section{Nén dữ liệu}
+
+Nén dữ liệu là quá trình giảm kích thước tệp tin bằng cách loại bỏ các dữ liệu dư thừa hoặc biểu diễn dữ liệu theo cách tối ưu hơn. Quá trình này giúp tiết kiệm băng thông khi truyền tải qua mạng, đồng thời rút ngắn thời gian gửi và nhận. Trong phạm vi đề tài, thuật toán nén ZIP được sử dụng vì tính phổ biến, hiệu quả và dễ tích hợp với ngôn ngữ lập trình Python thông qua thư viện \texttt{zipfile}.
+
+Nén không làm thay đổi nội dung dữ liệu gốc và có thể phục hồi chính xác 100\% sau khi giải nén, do đó phù hợp để truyền tải các tài liệu tài chính quan trọng.
+
+\section{Mã hóa đối xứng}
+
+Mã hóa là quá trình chuyển đổi dữ liệu từ dạng có thể đọc được (plaintext) sang dạng không thể đọc được (ciphertext), nhằm đảm bảo rằng chỉ người được cấp quyền mới có thể truy cập thông tin gốc. Trong đề tài này, mã hóa đối xứng được sử dụng, cụ thể là thuật toán AES (Advanced Encryption Standard).
+
+AES là thuật toán mã hóa khối, sử dụng cùng một khóa cho cả mã hóa và giải mã. Nó được tiêu chuẩn hóa bởi NIST và sử dụng rộng rãi trong nhiều hệ thống bảo mật thực tế vì có tốc độ cao, mức độ bảo mật mạnh và dễ triển khai. Việc kết hợp mã hóa với nén giúp nâng cao cả tính bảo mật lẫn hiệu suất truyền tải.
+
+\section{Lập trình socket trong Python}
+
+Socket là một giao diện lập trình mạng cho phép hai thiết bị giao tiếp với nhau thông qua các giao thức như TCP hoặc UDP. Trong đề tài này, giao thức TCP được sử dụng để đảm bảo việc truyền dữ liệu diễn ra đáng tin cậy, đúng thứ tự và không mất mát.
+
+Python cung cấp mô-đun \texttt{socket}, cho phép lập trình viên dễ dàng xây dựng các ứng dụng mạng dạng client-server. Mô hình truyền tải trong hệ thống đề xuất bao gồm một máy khách gửi tệp nén và mã hóa qua socket tới máy chủ, nơi dữ liệu sẽ được giải mã và giải nén.
+
+\section{Tính toàn vẹn và bảo mật trong truyền dữ liệu}
+
+Bảo mật không chỉ bao gồm việc giữ kín nội dung (confidentiality), mà còn phải đảm bảo tính toàn vẹn (integrity) và xác thực (authenticity) của dữ liệu. Trong đề tài, tính toàn vẹn được đảm bảo bằng cách kiểm tra sự khớp nhau giữa dữ liệu trước và sau quá trình nhận. Ngoài ra, việc sử dụng khóa mã hóa riêng giữa client và server giúp ngăn chặn truy cập trái phép.
+
+\section{Thư viện sử dụng}
+
+Trong quá trình hiện thực đề tài, các thư viện Python sau được sử dụng:
+
+\begin{itemize}
+  \item \textbf{zipfile}: nén và giải nén dữ liệu theo định dạng ZIP.
+  \item \textbf{cryptography.fernet}: mã hóa và giải mã dữ liệu bằng khóa đối xứng an toàn.
+  \item \textbf{socket}: lập trình mạng giữa client và server.
+  \item \textbf{os, sys}: thao tác với hệ thống tệp và xử lý tham số dòng lệnh.
+\end{itemize}
+
+Những thư viện này giúp đơn giản hóa quá trình lập trình, đảm bảo hiệu quả triển khai và dễ bảo trì hệ thống.

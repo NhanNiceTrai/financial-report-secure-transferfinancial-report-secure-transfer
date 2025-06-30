@@ -1,0 +1,47 @@
+\input{styles/settings}
+\thesislayout
+\begin{document}
+
+% Bìa báo cáo (SV sử dụng MS Word tạo bìa, sau đó export thành file PDF để ghép vào báo cáo)
+
+\begin{titlepage}
+\centering
+\coverpage
+\end{titlepage}
+
+
+% --- Phần đầu tài liệu (roman numbering, không đánh số chapter) ---
+\frontmatter
+
+% --- Lời cảm ơn ---
+\begin{acknowledgments}
+Chúng em xin gửi lời cảm ơn chân thành đến Thầy/Cô đã tận tình giảng dạy và hỗ trợ trong suốt quá trình học tập. Đây là nền tảng vững chắc để chúng em thực hiện và hoàn thành bài tập lớn học phần "Nhập môn An toàn bảo mật thông tin".
+\end{acknowledgments}
+
+% --- Mục lục tự động ---
+\tableofcontents
+\listoffigures
+\listoftables
+\listofalgorithms  % Chỉ mở nếu có dùng gói thuật toán
+
+% --- Phần nội dung chính ---
+\mainmatter
+\fancyhead{}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy} 
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyhead[R]{\chaptername\ \thechapter\ --\ \leftmark}
+
+% --- Gọi các chương ---
+\input{chapters/introduction}
+\input{chapters/document-contents}
+\input{chapters/implement}       % ✅ Phần bổ sung nâng cao
+\input{chapters/experiment}      % ✅ Phần bổ sung nâng cao
+\input{chapters/conclusion}
+\input{chapters/appendix}        % ✅ Phụ lục (mã nguồn, kiểm thử)
+
+% --- Tài liệu tham khảo ---
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

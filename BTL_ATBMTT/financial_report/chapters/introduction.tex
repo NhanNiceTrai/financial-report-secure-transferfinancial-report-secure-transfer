@@ -1,0 +1,33 @@
+\chapter{Giới thiệu}
+
+\section{Bối cảnh và lý do chọn đề tài}
+
+Trong thời đại công nghệ số, bảo mật thông tin tài chính là một yêu cầu then chốt đối với mọi tổ chức. Việc truyền tải báo cáo tài chính qua môi trường mạng tiềm ẩn nhiều nguy cơ bị đánh cắp, rò rỉ hoặc bị chỉnh sửa nội dung. Do đó, nhu cầu phát triển một hệ thống giúp đảm bảo tính bảo mật, toàn vẹn và hiệu quả truyền tải dữ liệu là hết sức cần thiết.
+
+Đề tài “Gửi báo cáo tài chính có nén và mã hóa” được lựa chọn với mục tiêu giải quyết bài toán trên bằng cách áp dụng kết hợp giữa các kỹ thuật nén dữ liệu và mã hóa đối xứng. Dữ liệu sẽ được nén nhằm giảm kích thước truyền tải, sau đó được mã hóa để đảm bảo tính bảo mật, trước khi được truyền từ máy khách (client) đến máy chủ (server).
+
+\section{Mục tiêu của đề tài}
+
+Đề tài hướng đến việc xây dựng một hệ thống có các chức năng chính sau:
+
+\begin{itemize}
+  \item Nén tệp báo cáo tài chính đầu vào nhằm tối ưu hóa dung lượng truyền tải.
+  \item Mã hóa tệp nén sử dụng kỹ thuật mã hóa đối xứng (AES hoặc tương đương).
+  \item Gửi dữ liệu đã mã hóa thông qua kết nối mạng socket TCP.
+  \item Tại phía máy chủ, giải mã và giải nén để phục hồi tệp gốc.
+  \item Đảm bảo tính toàn vẹn và bảo mật trong toàn bộ quá trình truyền dữ liệu.
+\end{itemize}
+
+\section{Phạm vi và ứng dụng thực tế}
+
+Phạm vi của đề tài giới hạn ở mức truyền một tệp báo cáo tài chính định dạng PDF giữa một client và một server trong mạng nội bộ. Tuy nhiên, hệ thống có thể dễ dàng mở rộng để áp dụng trong các môi trường lớn hơn như:
+Nội dung hệ thống sử dụng mã hóa đối xứng DES \cite{desAlgorithm} và socket trong Python \cite{pythonSocket}.
+
+\begin{itemize}
+  \item Truyền tài liệu giữa các chi nhánh ngân hàng.
+  \item Giao tiếp an toàn giữa các phòng ban trong doanh nghiệp.
+  \item Nền tảng cơ bản cho các ứng dụng truyền dữ liệu bảo mật qua mạng Internet.
+\end{itemize}
+
+Thông qua đề tài, sinh viên có cơ hội tiếp cận với các kỹ thuật nén và mã hóa cơ bản, đồng thời thực hành lập trình socket, một kỹ năng quan trọng trong lĩnh vực bảo mật và mạng máy tính.
+

@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper,oneside]{book}
+
+% Bộ mã và tiếng Việt
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam}
+\usepackage[T5]{fontenc}
+
+% Các gói toán học và định dạng
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{tipa}
+\usepackage{booktabs}
+\usepackage{mathptmx}
+
+% Hình ảnh và bảng
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\graphicspath{{figs/}}
+
+% Định nghĩa cột bảng có căn giữa
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Giải thuật
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\makeatletter
+\renewcommand{\ALG@name}{Giải thuật}
+\renewcommand{\listalgorithmname}{Danh sách giải thuật}
+\makeatother
+\captionsetup[algorithm]{labelsep=colon}
+\def\algbackskip{\hskip-\ALG@thistlm}
+
+% Canh lề trang chuyên nghiệp
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+
+% Font và dòng
+\linespread{1.25}
+\usepackage[skip=10pt plus1pt, indent=0pt]{parskip} % Không thụt đầu dòng
+
+% Tô màu và liên kết
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{carmine}{rgb}{0.59, 0.0, 0.09}
+\usepackage[unicode, colorlinks=true, urlcolor=carmine, citecolor=cobalt, linkcolor=carmine, pdfborder={0 0 0}]{hyperref}
+
+% Loại bỏ trang trắng đầu tiên
+\usepackage{atbegshi}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+
+% Gói thesis riêng của template
+\usepackage{styles/thesis}
+
+% Đánh số tối đa tới subsubsection
+\setcounter{secnumdepth}{2}
+
+\usepackage{listings}  % hỗ trợ lstlisting
+

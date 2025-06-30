@@ -1,0 +1,40 @@
+\chapter{Kết luận}
+
+\section{Tóm tắt nội dung đã thực hiện}
+
+Trong khuôn khổ đề tài, nhóm đã xây dựng thành công một hệ thống gửi báo cáo tài chính có tích hợp cơ chế nén và mã hóa dữ liệu, nhằm đảm bảo hiệu quả truyền tải và tính bảo mật trong quá trình trao đổi thông tin giữa client và server.
+
+Hệ thống hoạt động theo mô hình client–server, sử dụng thuật toán nén chuẩn ZIP và mã hóa đối xứng AES thông qua thư viện Fernet trong Python. Toàn bộ quy trình được triển khai và thử nghiệm thực tế trên môi trường mạng LAN, với kết quả khả quan cả về hiệu suất và độ an toàn thông tin.
+
+\section{Kết quả đạt được}
+
+Kết quả thực nghiệm cho thấy:
+
+\begin{itemize}
+  \item Quá trình nén giúp giảm dung lượng tệp trung bình hơn 30\%, tiết kiệm băng thông truyền tải.
+  \item Mã hóa đảm bảo tính riêng tư, dữ liệu truyền đi hoàn toàn không thể đọc được nếu không có khóa.
+  \item Tốc độ xử lý nhanh, truyền nhận hoàn tất trong chưa đầy 1 giây với tệp dung lượng khoảng 1MB.
+  \item File sau giải mã và giải nén giống hoàn toàn với file gốc, đảm bảo tính toàn vẹn dữ liệu.
+\end{itemize}
+
+\section{Hạn chế và hướng phát triển}
+
+Mặc dù hệ thống hoạt động ổn định, đề tài vẫn tồn tại một số hạn chế:
+
+\begin{itemize}
+  \item Chưa triển khai xác thực định danh người gửi/nhận (authentication).
+  \item Khóa mã hóa đang được cố định và chia thủ công, chưa có cơ chế trao đổi khóa tự động.
+  \item Chỉ thử nghiệm trên mạng LAN, chưa đánh giá độ ổn định khi truyền qua Internet hoặc dữ liệu lớn.
+\end{itemize}
+
+Trong tương lai, hệ thống có thể được mở rộng theo các hướng:
+
+\begin{itemize}
+  \item Tích hợp giao diện người dùng (GUI) để thân thiện hơn với người sử dụng.
+  \item Áp dụng mã hóa bất đối xứng để trao đổi khóa an toàn hơn.
+  \item Triển khai trên nền tảng Web hoặc Cloud để hỗ trợ truy cập từ xa.
+\end{itemize}
+
+\section{Kết luận chung}
+
+Đề tài đã góp phần minh họa một cách cụ thể và thực tiễn việc ứng dụng kỹ thuật nén và mã hóa trong lĩnh vực bảo mật thông tin. Việc xây dựng hệ thống không chỉ nâng cao hiểu biết về lập trình mạng và bảo mật, mà còn tạo tiền đề cho các nghiên cứu chuyên sâu hơn trong tương lai về an toàn dữ liệu trong môi trường phân tán.
